@@ -1,8 +1,12 @@
-# Houdini Addons - Quick Nodes
+# Houdini Addons
 
-Sets of tools and scripts for Sidefx Houdini.
+A sets of tools and scripts for Sidefx Houdini.
 
-## Installation
+## Quick Nodes
+
+### Installation
+
+[Intro to Quick Nodes]()
 
 Copy and paste "scripts" and "toolbar" folder in the root path of houdini preferences folder.
 
