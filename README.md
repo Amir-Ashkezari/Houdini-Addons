@@ -6,7 +6,7 @@ A sets of tools and scripts for Sidefx Houdini.
 
 ### Installation
 
-[Intro to Quick Nodes]()
+[Intro to Quick Nodes](https://vimeo.com/588357980)
 
 Copy and paste "scripts" and "toolbar" folder in the root path of houdini preferences folder.
 
