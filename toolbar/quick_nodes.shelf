@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="quick_nodes" label="Quick Nodes">
+    <memberTool name="custom_wrangle"/>
+    <memberTool name="custom_vop"/>
+    <memberTool name="custom_null"/>
+    <memberTool name="custom_merge"/>
+    <memberTool name="xform"/>
+  </toolshelf>
+
+  <tool name="custom_wrangle" label="Wrangle" icon="SOP_attribwrangle">
+    <script scriptType="python"><![CDATA[from quicknodes import main
+
+main.customWrangle()]]></script>
+  </tool>
+
+  <tool name="custom_vop" label="VOP" icon="SOP_attribvop">
+    <script scriptType="python"><![CDATA[from quicknodes import main
+
+main.customVop()]]></script>
+  </tool>
+
+  <tool name="custom_null" label="OUT" icon="SOP_null">
+    <script scriptType="python"><![CDATA[from quicknodes import main
+
+main.setOutput()]]></script>
+  </tool>
+
+  <tool name="custom_merge" label="Merge" icon="SOP_merge">
+    <script scriptType="python"><![CDATA[from quicknodes import main
+
+main.multiMerge()]]></script>
+  </tool>
+
+  <tool name="xform" label="Xform" icon="SOP_xform">
+    <script scriptType="python"><![CDATA[from quicknodes import main
+
+main.xform()]]></script>
+  </tool>
+</shelfDocument>
