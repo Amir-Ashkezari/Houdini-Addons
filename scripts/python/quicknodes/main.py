@@ -160,3 +160,26 @@ def xform():
     new_node.setPosition(node_position)
     networkSetup(selNodes=selected_nodes[0], node=new_node)
 # end xform
+
+
+def detach():
+    """ Detach a node from it's input and output connections. """
+    try:
+        selected_nodes = hou.selectedNodes()
+    except IndexError:
+        logger.warning('Nothing selected!')
+    else:
+        for node in selected_nodes:
+            for in_conn in node.inputConnections():
+                for out_conn in node.outputConnections():
+                    if in_conn.inputIndex() == out_conn.outputIndex():
+                        output_idx = 0 if in_conn.inputItem().networkItemType() == hou.networkItemType.NetworkDot else in_conn.outputIndex()
+                        out_conn.outputItem().setInput(out_conn.inputIndex(), in_conn.inputItem(), output_idx)
+                node.setInput(in_conn.inputIndex(), None)
+
+            for out_conn in node.outputConnections():
+                out_conn.outputItem().setInput(out_conn.inputIndex(), None)
+
+            pos = node.position()
+            node.setPosition(pos + hou.Vector2(1.0, 0.0))
+# end detach

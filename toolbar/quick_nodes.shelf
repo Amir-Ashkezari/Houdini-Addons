@@ -11,6 +11,7 @@
     <memberTool name="custom_null"/>
     <memberTool name="custom_merge"/>
     <memberTool name="xform"/>
+    <memberTool name="detach"/>
   </toolshelf>
 
   <tool name="custom_wrangle" label="Wrangle" icon="SOP_attribwrangle">
@@ -41,5 +42,11 @@ main.multiMerge()]]></script>
     <script scriptType="python"><![CDATA[from quicknodes import main
 
 main.xform()]]></script>
+  </tool>
+
+  <tool name="detach" label="Detach" icon="PLASMA_App">
+    <script scriptType="python"><![CDATA[from quicknodes import main
+
+main.detach()]]></script>
   </tool>
 </shelfDocument>
