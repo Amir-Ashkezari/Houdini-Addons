@@ -12,6 +12,7 @@
     <memberTool name="custom_merge"/>
     <memberTool name="xform"/>
     <memberTool name="detach"/>
+    <memberTool name="sopsolver"/>
   </toolshelf>
 
   <tool name="custom_wrangle" label="Wrangle" icon="SOP_attribwrangle">
@@ -48,5 +49,15 @@ main.xform()]]></script>
     <script scriptType="python"><![CDATA[from quicknodes import main
 
 main.detach()]]></script>
+  </tool>
+
+  <tool name="sopsolver" label="Sop Solver" icon="SOP_solver">
+    <toolMenuContext name="network">
+      <contextNetType>SOP</contextNetType>
+    </toolMenuContext>
+    <script scriptType="python"><![CDATA[from quicknodes import main
+
+main.sopSolver( **kwargs )
+]]></script>
   </tool>
 </shelfDocument>
